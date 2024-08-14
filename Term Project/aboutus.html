@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="overflow-x-hidden" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Term Project</title>
+    <!-- my css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-full overflow-x-hidden relative">
+     <!-- Term Project Yurino Murakami A01370533 -->
+    <!-- navigation bar used tailwind -->
+    <header> <!-- Border color updated -->
+        <div class="container mx-auto py-2 px-4 flex justify-between items-center">
+            <a href="#">
+                <img src="images/logo.png" width="80" alt="BowtieLogo">
+            </a>
+            <nav
+                class="absolute top-0 right-0 w-full bg-[#c37857] h-screen transform translate-x-full transition-transform duration-300 ease-in-out lg:relative lg:bg-transparent lg:h-auto lg:w-auto lg:translate-x-0 js-menu z-20 shadow-lg">
+                <a href="#" class="js-menu-close absolute p-2 top-0 right-0 lg:hidden" aria-label="Close menu"
+                    style="color: #eeedbe;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </a>
+                <ul
+                    class="flex flex-col items-center justify-center h-full text-white lg:flex-row lg:text-[#734444] lg:h-auto lg:justify-center">
+                    <li
+                        class="w-full border-b border-[#99b27f] lg:border-0 lg:w-auto lg:mx-4 hover:bg-[#99b27f] lg:hover:bg-transparent hover:text-[#eeedbe] transition-colors duration-300">
+                        <a href="index.html" class="block py-2 px-4 text-center lg:py-0 lg:px-0">Home</a>
+                    </li>
+                    <li
+                        class="w-full border-b border-[#99b27f] lg:border-0 lg:w-auto lg:mx-4 hover:bg-[#99b27f] lg:hover:bg-transparent hover:text-[#eeedbe] transition-colors duration-300">
+                        <a href="aboutus.html" class="block py-2 px-4 text-center lg:py-0 lg:px-0">About us</a>
+                    </li>
+                    <li
+                        class="w-full border-b border-[#99b27f] lg:border-0 lg:w-auto lg:mx-4 hover:bg-[#99b27f] lg:hover:bg-transparent hover:text-[#eeedbe] transition-colors duration-300">
+                        <a href="gallery.html" class="block py-2 px-4 text-center lg:py-0 lg:px-0">Gallery</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="#" class="js-menu-open lg:hidden p-2 rounded-lg hover:bg-[#eeedbe]" aria-label="Open menu">
+                <!-- Secondary brand color for hover background -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-10 h-10" style="color: #734444;"> <!-- Border color -->
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="container">
+            <div class="grid aboutus">
+                <div class="aboutus__imgbox"><img src="images/pololaid.png" alt="pololaid image"></div>
+                <div class="aboutus__content">
+                    <h1>We are two creative besties!</h1>
+                    <p>Moyu and Yuri</p>
+                    <div class="aboutus__content-detailed">
+                        <p>We are creative best friend now working together. We are childhood friends from Sapporo who
+                            love to travel, talk about Kpop and cafe hoping. Now we are decided to pursue a dream we've
+                            had for years, of putting our skills together!!
+                    </div>
+                    <div class="aboutus__content-detailed">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt non corporis nihil maiores hic recusandae dolorem esse amet veniam animi vel consequuntur ea saepe quo, temporibus neque. Quo, possimus architecto!</p>
+                    </div>
+
+
+                </div>
+        </section>
+    </main>
+
+
+    <footer class="bg-[#734444] text-white py-6">
+        <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-center">
+            <!-- Logo and description -->
+            <div class="flex flex-col items-center lg:items-start mb-6 lg:mb-0">
+                <a href="#">
+                    <img src="images/logo.png" width="80" alt="BowLogo" class="mb-4">
+                </a>
+                <p class="text-center lg:text-left">Providing quality service and support to our valued clients.</p>
+            </div>
+
+            <!-- Navigation links -->
+            <div class="flex flex-col lg:flex-row mb-6 lg:mb-0">
+                <div class="lg:mr-12">
+                    <h5 class="text-xl font-semibold mb-4"> Links</h5>
+                    <ul>
+                        <li><a href="index.html" class="hover:text-[#eeedbe] transition-colors duration-300">Home</a>
+                        </li>
+                        <li><a href="aboutus.html" class="hover:text-[#eeedbe] transition-colors duration-300">About
+                                Us</a></li>
+                        <li class="mb-4"><a href="gallery.html"
+                                class="hover:text-[#eeedbe] transition-colors duration-300">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-semibold mb-4">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <!-- Instagram icon -->
+                        <img src="images/instaIcon.png" alt="Icon Description" class="w-6 h-6" />
+                        <!-- Pinterest icon -->
+                        <img src="images/pinterestIcon.png" alt="Icon Description" class="w-6 h-6" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // About us page image fade in
+        document.addEventListener("DOMContentLoaded", () => {
+            // This ensures the code inside runs as soon as the DOM is ready.
+            const imgBox = document.querySelector('.aboutus__imgbox');
+            // This element will be stored in the variable 'imgBox'.
+            imgBox.classList.add('visible');
+            // The 'classList.add' method adds the specified class ('visible') to the selected element ('imgBox').
+            // Adds the 'visible' class to trigger a fade-in effect
+        });
+
+    </script>
+
+    <!-- mobile nav Js -->
+    <script src="js/nav.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>

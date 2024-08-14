@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="overflow-x-hidden" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Term Project</title>
+    <!-- my css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/msnry.css">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-full overflow-x-hidden relative">
+<!-- Term Project Yurino Murakami A01370533 -->
+<!-- navigation bar used tailwind -->
+<header> <!-- Border color updated -->
+    <div class="container mx-auto py-2 px-4 flex justify-between items-center">
+        <a href="#">
+            <img src="images/logo.png" width="80" alt="BowtieLogo">
+        </a>
+        <nav class="absolute top-0 right-0 w-full bg-[#c37857] h-screen transform translate-x-full transition-transform duration-300 ease-in-out lg:relative lg:bg-transparent lg:h-auto lg:w-auto lg:translate-x-0 js-menu z-20 shadow-lg">
+            <a href="#" class="js-menu-close absolute p-2 top-0 right-0 lg:hidden" aria-label="Close menu"
+                style="color: #eeedbe;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </a>
+            <ul class="flex flex-col items-center justify-center h-full text-white lg:flex-row lg:text-[#734444] lg:h-auto lg:justify-center">
+                <li class="w-full border-b border-[#99b27f] lg:border-0 lg:w-auto lg:mx-4 hover:bg-[#99b27f] lg:hover:bg-transparent hover:text-[#eeedbe] transition-colors duration-300">
+                    <a href="index.html" class="block py-2 px-4 text-center lg:py-0 lg:px-0">Home</a>
+                </li>
+                <li class="w-full border-b border-[#99b27f] lg:border-0 lg:w-auto lg:mx-4 hover:bg-[#99b27f] lg:hover:bg-transparent hover:text-[#eeedbe] transition-colors duration-300">
+                    <a href="aboutus.html" class="block py-2 px-4 text-center lg:py-0 lg:px-0">About us</a>
+                </li>
+                <li class="w-full border-b border-[#99b27f] lg:border-0 lg:w-auto lg:mx-4 hover:bg-[#99b27f] lg:hover:bg-transparent hover:text-[#eeedbe] transition-colors duration-300">
+                    <a href="gallery.html" class="block py-2 px-4 text-center lg:py-0 lg:px-0">Gallery</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <a href="#" class="js-menu-open lg:hidden p-2 rounded-lg hover:bg-[#eeedbe]" aria-label="Open menu">
+            <!-- Secondary brand color for hover background -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-10 h-10" style="color: #734444;"> <!-- Border color -->
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </a>
+    </div>
+</header>
+
+<main>
+    <div class="container gallery-banner">
+        <div class="gallery-banner__content">
+        <h1>
+            Nail designs and graphic designs
+        </h1>
+        </div>
+    </div>
+    <div class="container msnry-grid mt-4">
+        <div class="msnry-grid-sizer"></div>
+        <div class="msnry-gutter-sizer"></div>
+        <!-- List of images -->
+        <div class="msnry-grid-item">
+            <img src="images/nails/nail5.jpg" alt="Nail 5">
+        </div>
+        <div class="msnry-grid-item">
+            <img src="images/graphics/G-1.jpg" alt="Graphic design-1">
+        </div>
+        <div class="msnry-grid-item">
+            <img src="images/graphics/G-2.jpg" alt="Graphic design-2">
+        </div>
+        <div class="msnry-grid-item">
+            <img src="images/nails/nail6.jpg" alt="Nail 6">
+        </div>
+        <div class="msnry-grid-item">
+            <img src="images/graphics/G-3.png" alt="Graphic design-3">
+        </div>
+        <div class="msnry-grid-item">
+            <img src="images/nails/nail7.jpg" alt="Nail 7">
+        </div>
+        <div class="msnry-grid-item">
+            <img src="images/nails/nail8.jpg" alt="Nail 8">
+        </div>
+        <div class="msnry-grid-item">
+            <img src="images/graphics/G-4.png" alt="Graphic design-4">
+        </div>
+        <div class="msnry-grid-item">
+            <img src="images/graphics/G-5.jpg" alt="Graphic design-5">
+        </div>
+        <div class="msnry-grid-item">
+            <img src="images/graphics/G-6.jpg" alt="Graphic design-6">
+        </div>
+        
+    </div>
+
+
+</main>
+
+
+<footer class="bg-[#734444] text-white py-6">
+    <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-center">
+        <!-- Logo and description -->
+        <div class="flex flex-col items-center lg:items-start mb-6 lg:mb-0">
+            <a href="#">
+                <img src="images/logo.png" width="80" alt="BowLogo" class="mb-4">
+            </a>
+            <p class="text-center lg:text-left">Providing quality service and support to our valued clients.</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="flex flex-col lg:flex-row mb-6 lg:mb-0">
+            <div class="lg:mr-12">
+                <h5 class="text-xl font-semibold mb-4"> Links</h5>
+                <ul>
+                    <li><a href="index.html" class="hover:text-[#eeedbe] transition-colors duration-300">Home</a></li>
+                    <li><a href="aboutus.html" class="hover:text-[#eeedbe] transition-colors duration-300">About Us</a></li>
+                    <li class="mb-4"><a href="gallery.html"
+                            class="hover:text-[#eeedbe] transition-colors duration-300">Gallery</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-xl font-semibold mb-4">Follow Us</h5>
+                <div class="flex space-x-4">
+                    <!-- Instagram icon -->
+                    <img src="images/instaIcon.png" alt="Icon Description" class="w-6 h-6" />
+                    <!-- Pinterest icon -->
+                    <img src="images/pinterestIcon.png" alt="Icon Description" class="w-6 h-6" />
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- mobile nav Js -->
+<script src="js/nav.js"></script>
+<!-- masonry Js -->
+<script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+<!-- msronry event listener -->
+<script src="js/msnry.js"></script>
+
+
+</body>

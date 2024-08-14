@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!-- Mobile Web Term Project Yurino Murakami #A01370533-->
+<html class="overflow-x-hidden" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Term Project</title>
+    <!-- Reset css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <!-- Flickity CSS -->
+    <link rel="stylesheet" href="css/flickity.css">
+    <!-- My css -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body class="min-h-full overflow-x-hidden relative">
+    <!-- Term Project Yurino Murakami A01370533 -->
+    <!-- navigation bar used tailwind -->
+    <header>
+        <div class="container mx-auto py-2 px-4 flex justify-between items-center">
+            <a href="#">
+                <img src="images/logo.png" width="80" alt="BowtieLogo">
+            </a>
+            <!-- nav.js will interact these following dom elements -->
+            <nav
+                class="absolute top-0 right-0 w-full bg-[#c37857] h-screen transform 
+                translate-x-full transition-transform duration-300 ease-in-out lg:relative lg:bg-opacity-0 lg:h-auto lg:w-auto lg:translate-x-0 js-menu z-20 shadow-lg z-20">
+
+                <a href="#" class="js-menu-close absolute p-2 top-0 right-0 lg:hidden" aria-label="Close menu"
+                    style="color: #eeedbe;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </a>
+                <ul
+                    class="flex flex-col items-center justify-center h-full text-white lg:flex-row lg:text-[#734444] lg:h-auto lg:justify-center">
+                    <li
+                        class="w-full border-b border-[#99b27f] lg:border-0 lg:w-auto lg:mx-4 hover:bg-[#99b27f] lg:hover:bg-transparent hover:text-[#eeedbe] transition-colors duration-300">
+                        <a href="index.html" class="block py-2 px-4 text-center lg:py-0 lg:px-0">Home</a>
+                    </li>
+                    <li
+                        class="w-full border-b border-[#99b27f] lg:border-0 lg:w-auto lg:mx-4 hover:bg-[#99b27f] lg:hover:bg-transparent hover:text-[#eeedbe] transition-colors duration-300">
+                        <a href="aboutus.html" class="block py-2 px-4 text-center lg:py-0 lg:px-0">About us</a>
+                    </li>
+                    <li
+                        class="w-full border-b border-[#99b27f] lg:border-0 lg:w-auto lg:mx-4 hover:bg-[#99b27f] lg:hover:bg-transparent hover:text-[#eeedbe] transition-colors duration-300">
+                        <a href="gallery.html" class="block py-2 px-4 text-center lg:py-0 lg:px-0">Gallery</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="#" class="js-menu-open lg:hidden p-2 rounded-lg hover:bg-[#eeedbe]" aria-label="Open menu">
+                <!-- Secondary brand color for hover background -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-10 h-10" style="color: #734444;"> <!-- Border color -->
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <!-- Hero Section with Slick Carousel -->
+            <div class="home-hero">
+                <!-- Each div hare inside of .home-hero becomes a slide within the carousel. -->
+                <div><img src="images/hero_1-100.png" alt="Hero 1"></div>
+                <div><img src="images/hero_2-100.png" alt="Hero 2"></div>
+                <div><img src="images/hero_3-100.png" alt="Hero 3"></div>
+            </div>
+            <div class="grid container">
+                <div class="home-hero__heart">
+                    <img src="images/heartIcon.png" alt="heartIcon">
+                </div>
+                <div class="home__text">
+                    <h1>Welcome to our website</h1>
+                    <p>We are doing small business together!</p>
+                </div>
+            </div>
+
+            <div class="grid container">
+                <div class="home-about">
+                    <img src="images/Moyu.jpg">
+                    <div class="home-about__content flex flex-col items-center justify-center">
+                        <h2 class="pb-4">I am Moyu</h2>
+                        <div x-data="{ open: false }" class="relative justify-center">
+                            <!-- button -->
+                            <button @click="open = !open" class="bg-white text-[#734444] p-2 rounded">
+                                About me
+                            </button>
+
+                            <!-- dropdown menu -->
+                            <!-- I made a dropdown menu using Alpine.js  + tailwind -->
+                            <!-- This x-show="open":controls the visibility of the dropdown menu. 
+                                It shows the dropdown when the `open` variable is true and hides it when `open` is false. 
+                            -->
+                            <!-- @click.away="open = false": 
+                                This listens for clicks outside the dropdown menu. 
+                                If a click occurs outside, it sets the `open` variable to false, 
+                                closing the dropdown menu.  -->
+                            <!-- Other Tailwind classes are just for the styling-->
+
+                            <ul x-show="open" @click.away="open = false"
+                                class="absolute bg-white border mt-2 w-48 rounded shadow-lg">
+                                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">My job
+                                        experience</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Current
+                                        client job</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-about">
+                    <img src="images/Yuri.jpg">
+                    <div class="home-about__content flex flex-col items-center justify-center">
+                        <h2 class="pb-4">I am Yuri</h2>
+                        <div x-data="{ open: false }" class="relative justify-center">
+                            <!-- button -->
+                            <button @click="open = !open" class="bg-white text-[#734444] p-2 rounded">
+                                About me
+                            </button>
+
+                            <!-- dropdown menu -->
+                            <!-- I made a dropdown menu using Alpine.js  + tailwind -->
+                            <!-- This x-show="open":controls the visibility of the dropdown menu. 
+                                It shows the dropdown when the `open` variable is true and hides it when `open` is false. 
+                            -->
+                            <!-- @click.away="open = false": 
+                                This listens for clicks outside the dropdown menu. 
+                                If a click occurs outside, it sets the `open` variable to false, 
+                                closing the dropdown menu.  -->
+                            <!-- Other Tailwind classes are just for the styling-->
+                            <ul x-show="open" @click.away="open = false"
+                                class="absolute bg-white border mt-2 w-48 rounded shadow-lg">
+                                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">My job
+                                        experience</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Current
+                                        client job</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="home-gallery">
+                <!-- Gallery -->
+                <div class="container grid">
+                    <div class="home-gallery__title">
+                        <h2>Photo Gallery</h2>
+                        <p class="text-gray-800">Lorem ipsum dolor, sit amet consectctus. Laudantium!</p>
+                        <a href="gallery.html" target="_blank">
+                            <button class="btn-gallery">See More</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-gallery__nails container grid">
+                    <!-- The fancybox() method is applied to all anchor tags (<a>) with the data-fancybox attribute.  -->
+                    <!-- This makes them into a Fancybox gallery, allowing users to click on the thumbnails <img> and view images (href=) in a window with navigation-->
+                    <a data-fancybox="gallery" href="images/nails/nail1.jpg" data-caption="Caption 1">
+                        <img src="images/nails/nail1.jpg" alt="Nail 1">
+                    </a>
+                    <a data-fancybox="gallery" href="images/nails/nail2.jpg" data-caption="Caption 2">
+                        <img src="images/nails/nail2.jpg" alt="Nail 2">
+                    </a>
+                    <a data-fancybox="gallery" href="images/nails/nail3.jpg" data-caption="Caption 3">
+                        <img src="images/nails/nail3.jpg" alt="Nail 3">
+                    </a>
+                    <a data-fancybox="gallery" href="images/nails/nail4.jpg" data-caption="Caption 4">
+                        <img src="images/nails/nail4.jpg" alt="Nail 4">
+                    </a>
+                </div>
+            </section>
+
+
+            <section class="container grid">
+                <div class="home-book">
+                    <h3>Book from here</h3>
+                    <!-- Booking Section with Flickity Carousel -->
+                    <!-- The flickity() method in the flickity.js file initializes a carousel on the .carousel element. Each .carousel-cell inside the carousel div becomes a slide. -->
+                    <div class="carousel">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card__content">
+                                    <h4>Anime nail in salon</h4>
+                                    <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        Reprehenderit</p>
+                                    <a href="index.html" target="_blank">
+                                        <button class="btn-book">Book now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card__content">
+                                    <h4>Logo order</h4>
+                                    <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        Reprehenderit</p>
+                                    <a href="index.html" target="_blank">
+                                        <button class="btn-book">Book now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card__content">
+                                    <h4>Nail tips order</h4>
+                                    <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        Reprehenderit</p>
+                                    <a href="index.html" target="_blank">
+                                        <button class="btn-book">Book now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="placefolder">
+                <div class="grid container">
+                    <div class="placefolder-content">
+                        <h4>Future social media ad</h4>
+                    </div>
+                </div>
+            </section>
+    </main>
+
+
+
+
+    <footer class="bg-[#734444] text-white py-6">
+        <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-center">
+            <!-- Logo and description -->
+            <div class="flex flex-col items-center lg:items-start mb-6 lg:mb-0">
+                <a href="#">
+                    <img src="images/logo.png" width="80" alt="BowLogo" class="mb-4">
+                </a>
+                <p class="text-center lg:text-left">Providing quality service and support to our valued clients.</p>
+            </div>
+
+            <!-- Navigation links -->
+            <div class="flex flex-col lg:flex-row mb-6 lg:mb-0">
+                <div class="lg:mr-12">
+                    <h5 class="text-xl font-semibold mb-4"> Links</h5>
+                    <ul>
+                        <li><a href="index.html" class="hover:text-[#eeedbe] transition-colors duration-300">Home</a>
+                        </li>
+                        <li><a href="aboutus.html" class="hover:text-[#eeedbe] transition-colors duration-300">About
+                                Us</a></li>
+                        <li class="mb-4"><a href="gallery.html"
+                                class="hover:text-[#eeedbe] transition-colors duration-300">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-semibold mb-4">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <!-- Instagram icon -->
+                        <img src="images/instaIcon.png" alt="Icon Description" class="w-6 h-6" />
+                        <!-- Pinterest icon -->
+                        <img src="images/pinterestIcon.png" alt="Icon Description" class="w-6 h-6" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <!-- Alpine.js for dropdown menu-->
+    <!-- This script tag includes the Alpine.js library. Aside from the jQuery The `defer` attribute 
+    ensures that the script is executed after the HTML document is fully parsed. -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Carousel JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Fancybox JS -->
+    <script src="js/jquery.fancybox.min.js"></script>
+    <!-- Flickity JS -->
+    <script src="js/flickity.js"></script>
+    <!-- Plugin Js (I coded to initialize all plugins) -->
+    <script src="js/plugin.js"></script>
+    <!-- I coded. for the mobile nav animation -->
+    <script src="js/nav.js"></script>
+</body>
+
+</html>
